@@ -1,3 +1,12 @@
+---
+title: "About me"
+ excerpt: "About me"
+ author_profile: true
+ redirect_from: 
+   - /about/
+   - /about.html
+---
+
 Bio
 ======
 Flora Salim is a Professor in the School of Computing Technologies, RMIT University, Melbourne, Australia, the co-Deputy Director of [RMIT Centre for Information Discovery and Data Analytics (CIDDA)](https://www.rmit.edu.au/research/centres-collaborations/centre-for-information-discovery-and-data-analytics), and an Associate Investigator of [ARC Centre of Excellence in Automated Decision Making and Society (ADMS)](https://www.admscentre.org.au/). Flora's research group [Context Recognition and Urban Intelligence (CRUISE)](https://cruiseresearchgroup.github.io/) consists of eight PhD students and 3 postdocs. Her research interests include human behaviour modelling, time-series and spatio-temporal data mining, machine learning on stream and sensor data, ubiquitous computing, and smart cities. 
