@@ -6,11 +6,13 @@ main:
  # - title: "Talks"
   #  url: /talks/    
   
+  - title: "News"
+    url: /news/   
+    
   - title: "CRUISE Group"
     url: "https://cruiseresearchgroup.github.io/"
     
-  - title: "News"
-    url: /news/    
+ 
 
 #  - title: "Teaching"
   #  url: /teaching/    
