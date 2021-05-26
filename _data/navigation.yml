@@ -1,13 +1,16 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
+ # - title: "Publications"
+  #  url: /publications/
 
-  - title: "Talks"
-    url: /talks/    
+ # - title: "Talks"
+  #  url: /talks/    
+  
+  - title: "CRUISE Group"
+    url: "https://cruiseresearchgroup.github.io/"
 
-  - title: "Teaching"
-    url: /teaching/    
+#  - title: "Teaching"
+  #  url: /teaching/    
     
 #  - title: "Portfolio"
   #  url: /portfolio/
