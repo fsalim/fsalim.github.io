@@ -10,9 +10,10 @@ main:
     url: /news/   
     
   - title: "CRUISE Group"
-    url: "https://cruiseresearchgroup.github.io/"
+    url: "http://cruiseresearchgroup.florasalim.com/"
     
- 
+  - title: "CRUISE Git Repo"
+    url: https://github.com/cruiseresearchgroup
 
 #  - title: "Teaching"
   #  url: /teaching/    
