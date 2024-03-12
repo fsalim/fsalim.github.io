@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "FloraSalim"
   avatar           : "Flora_profile.jpg"
-  bio              : "Cisco Chair Professor, Digital Transport, AI, Mobility, Data Science, Ubiquitous Computing"
+  bio              : "Cisco Chair Professor, AI, ML, Mobility, Ubiquitous Computing"
   location         : "Sydney, Australia"
   employer         :
   pubmed           : 
@@ -100,13 +100,13 @@ author:
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  impactstory      : 
   lastfm           :
   linkedin         : "https://au.linkedin.com/in/flora-salim-6958986"
   orcid            : "https://orcid.org/0000-0002-1237-1664"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   steam            :
   tumblr           :
   twitter          : "flosalim"
