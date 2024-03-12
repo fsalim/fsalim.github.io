@@ -1,4 +1,4 @@
-![image](https://github.com/fsalim/fsalim.github.io/assets/567378/fbee0854-acac-43ed-8c82-4a46e836dea0)---
+---
 permalink: /
 title: "About Flora Salim"
 excerpt: "About me"
