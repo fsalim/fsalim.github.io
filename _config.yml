@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Flora Salim / Homepage"
 title_separator          : "-"
 name                     : &name "Flora Salim"
-description              : &description "Cisco Chair Professor, Digital Transport, AI, Mobility, Data Science, Ubiquitous Computing"
+description              : &description "Cisco Chair, Professor, Digital Transport, AI, Mobility, Data Science, Ubiquitous Computing"
 url                      : https://fsalim.github.io # the base hostname & protocol for your site e.g. "http://florasalim.com"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "fsalim/fsalim.github.io"
@@ -83,7 +83,7 @@ author:
   name             : "FloraSalim"
   avatar           : "Flora_profile.jpg"
   bio              : "Cisco Chair Professor, Digital Transport, AI, Mobility, Data Science, Ubiquitous Computing"
-  location         : "Sydney & Melbourne, Australia"
+  location         : "Sydney, Australia"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com.au/citations?user=Yz35RSYAAAAJ&hl=en"
