@@ -27,4 +27,4 @@ I am always recruiting for highly talented PhD students to join our group. You n
 Our Team
 ======
 
-
+CRUISE team at UNSW <br/><img src='/images/CRUISE_UNSW_team.png'>
