@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flora Salim — Professor of AI & Machine Learning, UNSW Sydney</title>
+<meta name="description" content="Flora Salim is a Professor in the School of Computer Science and Engineering at UNSW Sydney and Deputy Director (Engagement) of the UNSW AI Institute. Research on foundation models for time-series and spatio-temporal data, trustworthy and continual machine learning, and AI for transport, energy, sustainability and public health.">
+<meta property="og:title" content="Flora Salim — Professor of AI & Machine Learning, UNSW Sydney">
+<meta property="og:description" content="Foundation models for time-series and spatio-temporal data; trustworthy, robust and continual machine learning; AI for transport, energy, sustainability and public health.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000000;
+  --body:#1a1a1a;
+  --muted:#666666;
+  --line:#e2e2e2;
+  --bg:#ffffff;
+  --panel:#ffffff;
+  --accent:#000000;
+  --accent-soft:#f2f2f2;
+  --link:#000000;
+  --link-hover:#000000;
+  --maxw:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--body);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover);text-decoration:underline}
+section p a,.news a,.byline a{text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:600;line-height:1.2}
+
+/* Layout */
+.wrap{display:flex;max-width:var(--maxw);margin:0 auto;align-items:flex-start}
+aside{
+  width:320px;flex:0 0 320px;
+  position:sticky;top:0;align-self:flex-start;
+  height:100vh;overflow-y:auto;
+  padding:38px 30px;
+  border-right:1px solid var(--line);
+  background:var(--bg);
+}
+main{flex:1;min-width:0;padding:54px 56px 90px}
+
+/* Sidebar */
+.portrait{
+  width:172px;height:172px;border-radius:50%;object-fit:cover;
+  display:block;margin:0 auto 20px;
+  border:4px solid #fff;box-shadow:0 4px 18px rgba(0,0,0,.12);
+}
+.s-name{font-size:1.62rem;text-align:center;margin:0 0 4px}
+.s-role{text-align:center;color:var(--muted);font-size:.9rem;line-height:1.5;margin:0 0 18px}
+.s-role strong{color:var(--ink);font-weight:600}
+.affil{font-size:.84rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+.affil p{margin:0 0 9px}
+.affil .org{color:var(--ink);font-weight:600}
+.affil a{text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 6px}
+.links a{
+  font-size:.78rem;font-weight:500;letter-spacing:.02em;
+  padding:5px 11px;border:1px solid var(--line);border-radius:20px;
+  color:var(--body);background:var(--panel);transition:.15s;
+}
+.links a:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--ink);text-decoration:none}
+.s-email{text-align:center;font-size:.82rem;margin-top:14px;color:var(--muted)}
+
+/* Top nav (in main) */
+nav.top{
+  position:sticky;top:0;z-index:20;
+  background:rgba(251,250,247,.92);backdrop-filter:blur(8px);
+  margin:-54px -56px 38px;padding:14px 56px;
+  border-bottom:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:20px;font-size:.85rem;font-weight:500;
+}
+nav.top a{color:var(--muted);text-decoration:none}
+nav.top a:hover{color:var(--accent)}
+
+section{margin-bottom:48px;scroll-margin-top:70px}
+section > h2{
+  font-size:1.5rem;margin:0 0 18px;padding-bottom:8px;
+  border-bottom:2px solid var(--accent-soft);
+  position:relative;
+}
+section > h2::after{content:"";position:absolute;left:0;bottom:-2px;width:54px;height:2px;background:var(--accent)}
+p{margin:0 0 14px}
+.lead{font-size:1.06rem}
+
+/* Stats */
+.stats{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0 6px}
+.stat{flex:1;min-width:130px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.stat .n{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--accent);font-weight:600;line-height:1}
+.stat .l{font-size:.78rem;color:var(--muted);margin-top:5px}
+
+/* Research theme cards */
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:6px}
+.theme{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.theme h3{font-size:1.06rem;margin:0 0 8px}
+.theme p{font-size:.9rem;color:var(--muted);margin:0}
+
+/* News */
+.news{list-style:none;padding:0;margin:0}
+.news li{display:flex;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.news li:last-child{border-bottom:none}
+.news .date{flex:0 0 88px;color:var(--accent);font-weight:600;font-size:.82rem;padding-top:1px}
+
+/* Publications */
+.pubgroup{margin-bottom:30px}
+.pubgroup h3{
+  font-size:1.12rem;margin:0 0 4px;color:var(--ink);
+  display:flex;align-items:baseline;gap:10px;
+}
+.pubgroup .gdesc{font-size:.86rem;color:var(--muted);margin:0 0 12px}
+ol.pubs{margin:0;padding:0;list-style:none;counter-reset:none}
+ol.pubs li{
+  font-size:.9rem;line-height:1.55;padding:9px 0 9px 0;
+  border-bottom:1px solid #f0eee7;color:var(--body);
+}
+ol.pubs li:last-child{border-bottom:none}
+.pubs .title{color:var(--ink);font-weight:500}
+.pubs .venue{color:var(--accent);font-style:italic}
+.pubs .yr{color:var(--muted)}
+.tag{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  background:var(--accent-soft);color:var(--accent);padding:2px 7px;border-radius:4px;vertical-align:middle;margin-left:6px}
+
+/* Highlight cards */
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.hl{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:15px 17px}
+.hl .name{font-family:'Newsreader',serif;font-size:1.04rem;color:var(--ink);font-weight:600}
+.hl .name a{color:var(--ink);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.hl .meta{font-size:.82rem;color:var(--muted);margin-top:3px}
+.hl .why{font-size:.84rem;margin-top:8px;color:var(--body)}
+
+/* Two-col lists */
+.cols2{column-count:2;column-gap:34px}
+.cols2 .item{break-inside:avoid;margin-bottom:14px;font-size:.9rem}
+.cols2 .item .h{color:var(--ink);font-weight:600}
+.awards li,.service li{font-size:.9rem;margin-bottom:7px}
+.service ul,.awards ul{padding-left:18px;margin:0}
+
+.byline{font-size:.82rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;font-size:.82rem;color:var(--muted)}
+
+/* Mobile */
+.mobile-head{display:none}
+@media(max-width:880px){
+  .wrap{flex-direction:column}
+  aside{position:static;width:100%;height:auto;border-right:none;border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:0 28px;align-items:center;padding:26px 22px}
+  .portrait{width:108px;height:108px;margin:0 8px 0 0}
+  .s-name,.s-role{text-align:left}
+  .affil{flex-basis:100%;margin-top:14px}
+  main{padding:30px 22px 60px}
+  nav.top{margin:-30px -22px 28px;padding:12px 22px;overflow-x:auto}
+  .cols2{column-count:1}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ================= SIDEBAR ================= -->
+<aside>
+  <img class="portrait" src="images/Flora_profile.jpg" alt="Flora Salim"
+       onerror="this.onerror=null;this.src='https://fsalim.github.io/images/Flora_profile.jpg';">
+  <h1 class="s-name">Flora Salim</h1>
+  <p class="s-role"><strong>Professor</strong> of Artificial Intelligence &amp; Machine Learning<br>UNSW Sydney</p>
+
+  <div class="links">
+    <a href="mailto:flora.salim@unsw.edu.au">Email</a>
+    <a href="https://scholar.google.com/citations?hl=en&user=Yz35RSYAAAAJ" target="_blank" rel="noopener">Scholar</a>
+    <a href="https://www.linkedin.com/in/flora-salim-6958986" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://cruiseresearchgroup.github.io" target="_blank" rel="noopener">CRUISE Group</a>
+  </div>
+
+  <div class="affil">
+    <p><a class="org" href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering" target="_blank" rel="noopener">School of Computer Science &amp; Engineering</a><br><a href="https://www.unsw.edu.au" target="_blank" rel="noopener">UNSW Sydney</a></p>
+    <p><span class="org">Deputy Director (Engagement)</span><br><a href="https://www.unsw.edu.au/unsw-ai" target="_blank" rel="noopener">UNSW AI Institute</a></p>
+    <p><span class="org">Chief Investigator</span><br><a href="https://www.admscentre.org.au" target="_blank" rel="noopener">ARC Centre of Excellence for Automated Decision-Making &amp; Society (ADM+S)</a></p>
+    <p><span class="org">Key Chief Investigator</span><br><a href="https://dfco2.org.au" target="_blank" rel="noopener">ARC Training Centre for Whole-Life Design of Carbon-Neutral Infrastructure</a></p>
+    <p><span class="org">Vice Chair</span><br><a href="https://cis.taskforce.ieee.org/ai4tst/" target="_blank" rel="noopener">IEEE Task Force on AI for Time-Series &amp; Spatio-Temporal Data</a></p>
+  </div>
+  <p class="s-email">flora.salim@unsw.edu.au</p>
+</aside>
+
+<!-- ================= MAIN ================= -->
+<main>
+<nav class="top">
+  <a href="#about">About</a>
+  <a href="#news">News</a>
+  <a href="#research">Research</a>
+  <a href="#highlights">Selected Work</a>
+  <a href="#publications">Publications</a>
+  <a href="#service">Service</a>
+  <a href="#awards">Awards</a>
+  <a href="#talks">Talks</a>
+  <a href="#team">Group</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p class="lead">I am a Professor in the School of Computer Science and Engineering at the University of New South Wales (UNSW) Sydney, where I also serve as the Deputy Director (Engagement) of the UNSW AI Institute.</p>
+  <p>My work focuses on multimodal machine learning and foundation models for time-series and spatio-temporal data; robust and trustworthy machine learning; continual learning and post-tuning; and applications of AI for transport, energy, sustainability, and public health. I build robust models that predict, recommend, and increasingly act in the real world &mdash; the AI most exposed to dynamic, noisy and shifting data distributions &mdash; together with methods that keep these systems dependable when human oversight is partial or delayed.</p>
+  <p>I am a member of the Australian Academy of Science's National Committee for Information and Computing Sciences and a member of the Australian Research Council (ARC) College of Experts. I am a Vice Chair of the IEEE Task Force on AI for Time-Series and Spatio-Temporal Data. I serve on the editorial boards of <em>ACM TIST</em>, <em>ACM TSAS</em>, <em>PACM IMWUT</em>, <em>Machine Learning</em>, and <em>Nature Scientific Data</em>, and have served as Area Chair for NeurIPS, ICLR, ACL, KDD, and WWW.</p>
+  <p>My research has translated into tangible impact. For example, a granted US patent with Microsoft and productivity features in Microsoft&nbsp;365 and To&nbsp;Do; mobility flow forecasting deployed by the City of Melbourne; smart parking with Mornington Peninsula Shire; the NSW Digital Infrastructure Energy Flexibility datasets and the NeurIPS&nbsp;2024 Brick-by-Brick Challenge; and SensorLLM, aligning large language models with wearable sensors for trustworthy activity recognition.</p>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="date">2026</span><span>Named among the women shaping Australia's AI landscape by <em>Women's Agenda</em>. New papers at <strong>ICLR 2026</strong> (DRIFT-Net), <strong>ACL 2026</strong> (SOCIA-EVO), and <strong>The Web Conference 2026</strong>.</span></li>
+    <li><span class="date">2026</span><span>General Co-Chair, <strong>PAKDD 2026</strong>.</span></li>
+    <li><span class="date">2025</span><span>Named in the <strong>World's Top 2% Scientists</strong> (Stanford/Elsevier) for both career-long and single-recent-year impact.</span></li>
+    <li><span class="date">2025</span><span>Best Research Paper at <strong>ACM SIGSPATIAL 2025</strong> (XXLTraffic); Best Paper (Research Track) at <strong>ECML-PKDD 2025</strong> (PAR-AdvGAN); led the 3rd-placed team at the <strong>Meta CRAG Multimodal Challenge, KDD Cup 2025</strong>.</span></li>
+    <li><span class="date">2025</span><span>Appointed <strong>Vice Chair, IEEE Task Force on AI for Time-Series and Spatio-Temporal Data</strong>, and <strong>Editor, Nature Scientific Data</strong>. SensorLLM accepted at <strong>EMNLP 2025</strong>.</span></li>
+    <li><span class="date">2025</span><span>Appointed member of the <strong>Australian Academy of Science's National Committee for Information and Communication Sciences</strong>.</span></li>
+    <li><span class="date">2024</span><span>Released the <strong>Building Time-Series (BTS) dataset</strong> at NeurIPS 2024 and the Brick-by-Brick Challenge (1,800+ submissions). Keynote at <strong>ACM SIGSPATIAL 2024</strong>.</span></li>
+  </ul>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Research</h2>
+  <p>My group &mdash; <strong>Context Recognition and Urban Intelligence (CRUISE)</strong> &mdash; develops foundational AI methods for complex, long-horizon reasoning over real-world observations, and translates them into deployed systems across transport, energy, health, and the built environment. Current directions:</p>
+  <div class="themes">
+    <div class="theme"><h3>Foundation models for time-series &amp; spatio-temporal data</h3><p>LLMs and foundation models for forecasting, simulation, and reasoning over temporal, trajectory, and multimodal sensor data.</p></div>
+    <div class="theme"><h3>Robust, self-supervised &amp; continual learning</h3><p>Data- and label-efficient pretraining, change-point and anomaly detection, and learning that adapts to drift and open-world shift.</p></div>
+    <div class="theme"><h3>Trustworthy &amp; explainable AI</h3><p>Fairness, robustness, counterfactual explanations, and accountability for automated decision-making systems.</p></div>
+    <div class="theme"><h3>Multimodal &amp; ubiquitous computing</h3><p>Wearables, IoT, and human behaviour modelling for activity, engagement, and physiological sensing.</p></div>
+    <div class="theme"><h3>AI for transport &amp; smart cities</h3><p>Mobility forecasting, trajectory modelling, routing, and urban operations with city and government partners.</p></div>
+    <div class="theme"><h3>AI for energy, health &amp; sustainability</h3><p>Building energy flexibility, carbon performance, climate downscaling, and epidemic modelling.</p></div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+  <h2>Selected &amp; Pioneering Work</h2>
+  <p class="byline">A short list of papers that opened new directions. The complete, thematically grouped list follows below.</p>
+  <div class="highlights">
+    <div class="hl"><div class="name">PromptCast</div><div class="meta">Xue &amp; Salim &mdash; <em>IEEE TKDE</em>, 2023</div><div class="why">The first prompt-based learning paradigm for time-series forecasting &mdash; widely recognised as the work that introduced the applicability of LLMs to time-series.</div></div>
+    <div class="hl"><div class="name">SensorLLM</div><div class="meta">Li et&nbsp;al. &mdash; <em>EMNLP</em>, 2025</div><div class="why">Human-intuitive alignment of multivariate sensor data with LLMs for trustworthy activity recognition; inspiring ongoing work at Google.</div></div>
+    <div class="hl"><div class="name">TS-CP2</div><div class="meta">Deldari et&nbsp;al. &mdash; <em>WWW</em>, 2021</div><div class="why">Self-supervised contrastive predictive coding for time-series change-point detection &mdash; robustness without training labels.</div></div>
+    <div class="hl"><div class="name">COCOA</div><div class="meta">Deldari et&nbsp;al. &mdash; <em>IMWUT</em>, 2022</div><div class="why">Cross-modality contrastive self-supervised learning tailored for multimodal sensor data.</div></div>
+    <div class="hl"><div class="name">MobTCast</div><div class="meta">Xue et&nbsp;al. &mdash; <em>NeurIPS</em>, 2021</div><div class="why">Leveraging auxiliary trajectory forecasting for human mobility prediction.</div></div>
+    <div class="hl"><div class="name">Building Time-Series (BTS) Dataset</div><div class="meta">Prabowo et&nbsp;al. &mdash; <em>NeurIPS</em>, 2024</div><div class="why">Large-scale building analytics dataset and the Brick-by-Brick Challenge &mdash; an AI competition with 1,800+ global submissions for multi-label classification of building time-series data.</div></div>
+    <div class="hl"><div class="name">n-Gage</div><div class="meta">Gao et&nbsp;al. &mdash; <em>IMWUT</em>, 2020</div><div class="why">Predicting in-class engagement in the wild &mdash; IMWUT Distinguished Paper (top 3%); adopted by Aurecon for built-environment design.</div></div>
+    <div class="hl"><div class="name">XXLTraffic</div><div class="meta">Yin et&nbsp;al. &mdash; <em>ACM SIGSPATIAL</em>, 2025</div><div class="why">Extremely long traffic forecasting beyond test adaptation &mdash; Best Research Paper, SIGSPATIAL 2025.</div></div>
+    <div class="hl"><div class="name"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yz35RSYAAAAJ&sortby=pubdate&citation_for_view=Yz35RSYAAAAJ:JTqpx9DYBaYC" target="_blank" rel="noopener">Bisecle</a></div><div class="meta">Tan et&nbsp;al. &mdash; <em>NeurIPS</em>, 2025</div><div class="why">Binding and separation in continual learning for video-language understanding.</div></div>
+    <div class="hl"><div class="name"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yz35RSYAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=Yz35RSYAAAAJ:QD3KBmkZPeQC" target="_blank" rel="noopener">LLM4POI</a></div><div class="meta">Li et&nbsp;al. &mdash; <em>ACM SIGIR</em>, 2024</div><div class="why">Large language models for next point-of-interest recommendation.</div></div>
+    <div class="hl"><div class="name"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yz35RSYAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=Yz35RSYAAAAJ:rHJHxKgnXwkC" target="_blank" rel="noopener">ODEStream</a></div><div class="meta">Abushaqra et&nbsp;al. &mdash; <em>TMLR</em>, 2025</div><div class="why">A buffer-free online learning framework with an ODE-based adaptor for streaming time-series forecasting.</div></div>
+    <div class="hl"><div class="name"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yz35RSYAAAAJ&cstart=20&pagesize=80&citation_for_view=Yz35RSYAAAAJ:KbBQZpvPDL4C" target="_blank" rel="noopener">CroSSL</a></div><div class="meta">Deldari et&nbsp;al. &mdash; <em>ACM WSDM</em>, 2024</div><div class="why">Cross-modal self-supervised learning for time-series through latent masking.</div></div>
+    <div class="hl"><div class="name"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yz35RSYAAAAJ&cstart=20&pagesize=80&citation_for_view=Yz35RSYAAAAJ:SpbeaW3--B0C" target="_blank" rel="noopener">Translating Human Mobility Forecasting</a></div><div class="meta">Xue et&nbsp;al. &mdash; <em>ACM WSDM</em>, 2022</div><div class="why">Recasts mobility forecasting as a sentence-to-sentence generation task, predicting movement directly from natural-language descriptions.</div></div>
+    <div class="hl"><div class="name"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yz35RSYAAAAJ&citation_for_view=Yz35RSYAAAAJ:_FM0Bhl9EiAC" target="_blank" rel="noopener">Language Foundation Models for Mobility</a></div><div class="meta">Xue et&nbsp;al. &mdash; <em>ACM SIGSPATIAL</em>, 2022</div><div class="why">Adapts pre-trained language foundation models, via prompt templates, to forecast human mobility flows.</div></div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <h2>Publications by Theme</h2>
+  <p class="byline">Selected publications grouped by research theme. For the complete list, see my <a href="https://scholar.google.com/citations?hl=en&user=Yz35RSYAAAAJ" target="_blank" rel="noopener">Google&nbsp;Scholar profile</a>.</p>
+
+  <!-- T1 -->
+  <div class="pubgroup">
+    <h3>Foundation Models &amp; LLMs for Time-Series and Spatio-Temporal Data</h3>
+    <p class="gdesc">LLMs and foundation models for forecasting, simulation, recommendation, and reasoning over temporal, trajectory, and multimodal data.</p>
+    <ol class="pubs">
+      <li><span class="title">PromptCast: A new prompt-based learning paradigm for time series forecasting.</span> Xue &amp; Salim. <span class="venue">IEEE TKDE</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">SensorLLM: Human-intuitive alignment of multivariate sensor data with LLMs for activity recognition.</span> Li, Deldari, Chen, Xue &amp; Salim. <span class="venue">EMNLP</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Foundation models for spatio-temporal data science: A tutorial and survey.</span> Liang et&nbsp;al. <span class="venue">ACM SIGKDD</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">DRIFT-Net: A spectral-coupled neural operator for PDEs learning.</span> Li &amp; Salim. <span class="venue">ICLR</span>, <span class="yr">2026</span>.</li>
+      <li><span class="title">SOCIA-EVO: Automated simulator construction via dual-anchored bi-level optimization.</span> Hua et&nbsp;al. <span class="venue">ACL</span>, <span class="yr">2026</span>.</li>
+      <li><span class="title">Beyond single pass, looping through time: KG-IRAG with iterative knowledge retrieval.</span> Yang, Xue, Razzak &amp; Salim. <span class="venue">The Web Conference (WWW)</span>, <span class="yr">2026</span>.</li>
+      <li><span class="title">Beyond words: Integrating theory of mind into conversational agents.</span> Jafari, Hua, Xue &amp; Salim. <span class="venue">Findings of ACL</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">TrajLLM: A modular LLM-enhanced agent-based framework for realistic human trajectory simulation.</span> Ju et&nbsp;al. <span class="venue">The Web Conference (WWW)</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Large language models for next point-of-interest recommendation.</span> Li, de Rijke, Xue, Ao, Song &amp; Salim. <span class="venue">ACM SIGIR</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">MAPLE: Mobile app prediction leveraging large language model embeddings.</span> Khaokaew, Xue &amp; Salim. <span class="venue">PACM IMWUT</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Spatiotemporal pre-trained large language model for forecasting with missing values.</span> Fang, Xiang, Pan, Salim &amp; Chen. <span class="venue">IEEE IoT Journal</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Towards expressive spectral-temporal graph neural networks for time series forecasting.</span> Jin et&nbsp;al. <span class="venue">IEEE TPAMI</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Transforming urban dynamics: Harnessing large language models for smarter mobility.</span> Xue, Jin, Pan &amp; Salim. <span class="venue">IEEE Intelligent Systems</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Prompt mining for language models-based mobility flow forecasting.</span> Xue, Tang, Payani &amp; Salim. <span class="venue">ACM SIGSPATIAL</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Leveraging language foundation models for human mobility forecasting.</span> Xue, Voutharoja &amp; Salim. <span class="venue">ACM SIGSPATIAL</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Translating human mobility forecasting through natural language generation.</span> Xue, Salim, Ren &amp; Clarke. <span class="venue">ACM WSDM</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Artificial general intelligence for human mobility (vision paper).</span> Xue &amp; Salim. <span class="venue">ACM SIGSPATIAL</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Spectraformer: A unified random feature framework for transformer.</span> Nguyen, Yin, Joshi &amp; Salim. <span class="venue">ACM TIST</span>, <span class="yr">2026</span>.</li>
+    </ol>
+  </div>
+
+  <!-- T2 -->
+  <div class="pubgroup">
+    <h3>Robust, Self-Supervised &amp; Continual Learning</h3>
+    <p class="gdesc">Label- and data-efficient pretraining, change-point and anomaly detection, irregular and streaming time-series, and learning under drift and open-world shift.</p>
+    <ol class="pubs">
+      <li><span class="title">Time series change point detection with self-supervised contrastive predictive coding (TS-CP2).</span> Deldari, Smith, Xue &amp; Salim. <span class="venue">The Web Conference (WWW)</span>, <span class="yr">2021</span>.</li>
+      <li><span class="title">COCOA: Cross-modality contrastive learning for sensor data.</span> Deldari, Xue, Saeed, Smith &amp; Salim. <span class="venue">PACM IMWUT</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">CroSSL: Cross-modal self-supervised learning for time-series through latent masking.</span> Deldari et&nbsp;al. <span class="venue">ACM WSDM</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">ODEStream: A buffer-free online learning framework with ODE-based adaptor for streaming time series forecasting.</span> Abushaqra, Xue, Ren &amp; Salim. <span class="venue">TMLR</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">SeqLink: A robust neural-ODE architecture for modelling partially observed time series.</span> Abushaqra, Xue, Ren &amp; Salim. <span class="venue">TMLR</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">ViLCo-Bench: Video language continual learning benchmark.</span> Tang, Deldari, Xue, De Melo &amp; Salim. <span class="venue">NeurIPS</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Continually learning out-of-distribution spatiotemporal data for robust energy forecasting.</span> Prabowo, Chen, Xue, Sethuvenkatraman &amp; Salim. <span class="venue">ECML-PKDD</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Navigating out-of-distribution electricity load forecasting during COVID-19.</span> Prabowo et&nbsp;al. <span class="venue">ACM BuildSys</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Traffic forecasting on new roads using spatial contrastive pre-training (SCPT).</span> Prabowo, Xue, Shao, Koniusz &amp; Salim. <span class="venue">Data Mining and Knowledge Discovery</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Self-supervised activity representation learning with incremental data.</span> Liu, Deldari, Xue, Nguyen &amp; Salim. <span class="venue">IEEE MDM</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Federated self-supervised learning of multisensor representations for embedded intelligence.</span> Saeed, Salim, Ozcelebi &amp; Lukkien. <span class="venue">IEEE IoT Journal</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Detecting change intervals with isolation distributional kernel.</span> Cao et&nbsp;al. <span class="venue">JAIR</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">ESPRESSO: Entropy and shape aware time-series segmentation for heterogeneous sensor data.</span> Deldari, Smith, Sadri &amp; Salim. <span class="venue">PACM IMWUT</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Unsupervised online change point detection in high-dimensional time series.</span> Zameni et&nbsp;al. <span class="venue">Knowledge and Information Systems</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Exploring self-supervised representation ensembles for COVID-19 cough classification.</span> Xue &amp; Salim. <span class="venue">ACM SIGKDD</span>, <span class="yr">2021</span>.</li>
+    </ol>
+  </div>
+
+  <!-- T3 -->
+  <div class="pubgroup">
+    <h3>Spatio-Temporal &amp; Mobility Forecasting</h3>
+    <p class="gdesc">Trajectory modelling, traffic and urban-flow forecasting, and dynamic graph methods for mobility and spatio-temporal data.</p>
+    <ol class="pubs">
+      <li><span class="title">XXLTraffic: Expanding and extremely long traffic forecasting beyond test adaptation.</span> Yin, Xue, Prabowo, Ao &amp; Salim. <span class="venue">ACM SIGSPATIAL</span>, <span class="yr">2025</span>. <span class="tag">Best Paper</span></li>
+      <li><span class="title">MobTCast: Leveraging auxiliary trajectory forecasting for human mobility prediction.</span> Xue, Salim, Ren &amp; Oliver. <span class="venue">NeurIPS</span>, <span class="yr">2021</span>.</li>
+      <li><span class="title">Learning spatio-temporal dynamics on mobility networks for adaptation to open-world events.</span> Wang et&nbsp;al. <span class="venue">Artificial Intelligence (AIJ)</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Event-aware multimodal mobility nowcasting.</span> Wang, Jiang, Xue, Salim, Song &amp; Shibasaki. <span class="venue">AAAI</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">STEMO: Early spatio-temporal forecasting with multi-objective reinforcement learning.</span> Shao et&nbsp;al. <span class="venue">ACM SIGKDD</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Long-term spatio-temporal forecasting via dynamic multiple-graph attention.</span> Shao et&nbsp;al. <span class="venue">IJCAI</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Because every sensor is unique, so is every pair: Handling dynamicity in traffic forecasting.</span> Prabowo, Shao, Xue, Koniusz &amp; Salim. <span class="venue">ACM/IEEE IoTDI</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">T-JEPA: A joint-embedding predictive architecture for trajectory similarity computation.</span> Li, Xue, Song &amp; Salim. <span class="venue">ACM SIGSPATIAL</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Enhancing spatio-temporal quantile forecasting with curriculum learning.</span> Yin et&nbsp;al. <span class="venue">ACM SIGSPATIAL</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">SSTKG: Simple spatio-temporal knowledge graph for interpretable and versatile dynamic embedding.</span> Yang, Salim &amp; Xue. <span class="venue">The Web Conference (WWW)</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">TERMCast: Temporal relation modeling for effective urban flow forecasting.</span> Xue &amp; Salim. <span class="venue">PAKDD</span>, <span class="yr">2021</span>.</li>
+      <li><span class="title">Multiple-level point embedding for solving human trajectory imputation with prediction.</span> Qin et&nbsp;al. <span class="venue">ACM TSAS</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Vision-based multi-future trajectory prediction: A survey.</span> Huang, Xue, Pagnucco, Salim &amp; Song. <span class="venue">IEEE TNNLS</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Generative adversarial networks for spatio-temporal data: A survey.</span> Gao et&nbsp;al. <span class="venue">ACM TIST</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">What will you do for the rest of the day? Continuous trajectory prediction.</span> Sadri et&nbsp;al. <span class="venue">PACM IMWUT</span>, <span class="yr">2018</span>.</li>
+      <li><span class="title">Flight delay prediction with spatio-temporal trajectory convolutional network and airport situational awareness map.</span> Shao et&nbsp;al. <span class="venue">Neurocomputing</span>, <span class="yr">2022</span>.</li>
+    </ol>
+  </div>
+
+  <!-- T4 -->
+  <div class="pubgroup">
+    <h3>Trustworthy AI: Fairness, Explainability &amp; Robustness</h3>
+    <p class="gdesc">Fairness in automated decision-making, counterfactual and attribution-based explanations, adversarial robustness, and accountable AI.</p>
+    <ol class="pubs">
+      <li><span class="title">Counterfactual explanations via locally-guided sequential algorithmic recourse.</span> Small et&nbsp;al. <span class="venue">ACM TIST</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">PAR-AdvGAN: Improving adversarial attack capability with progressive auto-regression AdvGAN.</span> Zhang et&nbsp;al. <span class="venue">ECML-PKDD</span>, <span class="yr">2025</span>. <span class="tag">Best Paper</span></li>
+      <li><span class="title">AttEXplore: Attribution for explanation with model parameters exploration.</span> Zhu et&nbsp;al. <span class="venue">ICLR</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Equalised odds is not equal individual odds: Post-processing for group and individual fairness.</span> Small, Sokol, Manning, Salim &amp; Chan. <span class="venue">ACM FAccT</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Cross-model fairness: Empirical study of fairness and ethics under model multiplicity.</span> Sokol, Kull, Chan &amp; Salim. <span class="venue">ACM Journal on Responsible Computing</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Long-term fairness in ride-hailing platform.</span> Kang, Chan, Shao, Salim &amp; Leckie. <span class="venue">ECML-PKDD</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Promoting two-sided fairness in dynamic vehicle routing problems.</span> Kang, Zhang, Shao, Salim &amp; Chan. <span class="venue">GECCO</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">CAPRI-FAIR: Integration of multi-sided fairness in contextual POI recommendation.</span> Cruz, Salim, Khaokaew &amp; Chan. <span class="venue">ACM RecSys</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Explainable spatiotemporal reasoning for geospatial intelligence applications.</span> Duckham et&nbsp;al. <span class="venue">Transactions in GIS</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">SCONE-GAN: Semantic contrastive learning-based GAN for end-to-end image translation.</span> Abbasnejad et&nbsp;al. <span class="venue">IEEE/CVF CVPR Workshops</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">How crowd worker factors influence subjective annotations: Tagging misogynistic hate speech.</span> Hettiachchi et&nbsp;al. <span class="venue">AAAI HCOMP</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">DeepObfuscator: Obfuscating intermediate representations with privacy-preserving adversarial learning.</span> Li et&nbsp;al. <span class="venue">ACM/IEEE IoTDI</span>, <span class="yr">2021</span>.</li>
+    </ol>
+  </div>
+
+  <!-- T5 -->
+  <div class="pubgroup">
+    <h3>Multimodal, Ubiquitous Computing &amp; Human Behaviour</h3>
+    <p class="gdesc">Wearables, IoT and multimodal sensing for activity, engagement, physiological and behaviour modelling, and intelligent task assistance.</p>
+    <ol class="pubs">
+      <li><span class="title">n-Gage: Predicting in-class emotional, behavioural and cognitive engagement in the wild.</span> Gao, Shao, Rahaman &amp; Salim. <span class="venue">PACM IMWUT</span>, <span class="yr">2020</span>. <span class="tag">Distinguished Paper</span></li>
+      <li><span class="title">SenseSeek dataset: Multimodal sensing to study information seeking behaviors.</span> Ji et&nbsp;al. <span class="venue">PACM IMWUT</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Watch out! E-scooter coming through! Multimodal sensing of mixed traffic use.</span> Kegalle et&nbsp;al. <span class="venue">PACM IMWUT</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Characterizing information seeking processes with multiple physiological signals.</span> Ji, Hettiachchi, Salim, Scholer &amp; Spina. <span class="venue">ACM SIGIR</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">WorkR: Occupation inference for intelligent task assistance.</span> Khaokaew, Xue, Rahaman &amp; Salim. <span class="venue">ACM ISWC</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">GustosonicSense: Towards understanding the design of playful gustosonic eating experiences.</span> Wang et&nbsp;al. <span class="venue">ACM CHI</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Individual and group-wise classroom seating experience: Effects on student engagement.</span> Gao, Rahaman, Shao, Ji &amp; Salim. <span class="venue">PACM IMWUT</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Toward social role-based interruptibility management.</span> Anderson et&nbsp;al. <span class="venue">IEEE Pervasive Computing</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">An ambient-physical system to infer concentration in open-plan workplace.</span> Rahaman et&nbsp;al. <span class="venue">IEEE IoT Journal</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Joint modelling of cyber activities and physical context to improve prediction of visitor behaviors.</span> Kaur et&nbsp;al. <span class="venue">ACM TOSN</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Intelligent task recognition: Towards enabling productivity assistance in daily life.</span> Liono et&nbsp;al. <span class="venue">ACM ICMR</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Imagining future digital assistants at work: A study of task management needs.</span> Khaokaew et&nbsp;al. <span class="venue">Int. Journal of Human-Computer Studies</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Predicting personality traits from physical activity intensity.</span> Gao, Shao &amp; Salim. <span class="venue">IEEE Computer</span>, <span class="yr">2019</span>.</li>
+      <li><span class="title">App usage on-the-move: Context- and commute-aware next app prediction.</span> Kang et&nbsp;al. <span class="venue">Pervasive and Mobile Computing</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Urban computing in the wild: A survey on large scale participation and citizen engagement.</span> Salim &amp; Haque. <span class="venue">Int. Journal of Human-Computer Studies</span>, <span class="yr">2015</span>.</li>
+    </ol>
+  </div>
+
+  <!-- T6 -->
+  <div class="pubgroup">
+    <h3>AI for Health &amp; Public Health</h3>
+    <p class="gdesc">Epidemic and infectious-disease modelling, bias in predictive health models, and patient representation learning from clinical data.</p>
+    <ol class="pubs">
+      <li><span class="title">Genomic-informed heterogeneous graph learning for spatiotemporal avian influenza outbreak forecasting.</span> Du et&nbsp;al. <span class="venue">The Web Conference (WWW)</span>, <span class="yr">2026</span>.</li>
+      <li><span class="title">Mining citywide dengue spread patterns in Singapore through hotspot dynamics from open web data.</span> Huang et&nbsp;al. <span class="venue">The Web Conference (WWW)</span>, <span class="yr">2026</span>.</li>
+      <li><span class="title">EpiScale: Large-scale simulation of infectious disease based on human mobility.</span> Kong et&nbsp;al. <span class="venue">ACM SIGSPATIAL</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Simulated infectious diseases datasets with controlled data bias.</span> Kong et&nbsp;al. <span class="venue">ACM SIGKDD</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Leveraging simulation data to understand bias in predictive models of infectious disease spread.</span> Z&uuml;fle, Salim et&nbsp;al. <span class="venue">ACM TSAS</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">A multi-graph fusion framework for patient representation learning.</span> Liu, Zhang, Qin &amp; Salim. <span class="venue">IEEE ICHI</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Hypergraph convolutional networks for fine-grained ICU patient similarity analysis and risk prediction.</span> Liu et&nbsp;al. <span class="venue">IEEE ICHI</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Boosting patient representation learning via graph contrastive learning.</span> Zhang et&nbsp;al. <span class="venue">ECML-PKDD</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Contrastive learning-based imputation-prediction networks for in-hospital mortality risk modeling.</span> Liu et&nbsp;al. <span class="venue">ECML-PKDD</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Modeling long-term dependencies and short-term correlations in patient journey data.</span> Liu et&nbsp;al. <span class="venue">ACM BCB</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">FFA-IR: Towards an explainable and reliable medical report generation benchmark.</span> Li et&nbsp;al. <span class="venue">NeurIPS Datasets &amp; Benchmarks</span>, <span class="yr">2021</span>.</li>
+    </ol>
+  </div>
+
+  <!-- T7 -->
+  <div class="pubgroup">
+    <h3>AI for Energy, Buildings &amp; Sustainability</h3>
+    <p class="gdesc">Building energy flexibility and forecasting, occupant-behaviour modelling, thermal comfort, and large-scale datasets for the net-zero transition.</p>
+    <ol class="pubs">
+      <li><span class="title">Building Timeseries Dataset: Empowering large-scale building analytics.</span> Prabowo et&nbsp;al. <span class="venue">NeurIPS</span>, <span class="yr">2024</span>. <span class="tag">Dataset</span></li>
+      <li><span class="title">A global building occupant behavior database.</span> Dong et&nbsp;al. <span class="venue">Nature Scientific Data</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Understanding occupants' behaviour, engagement, emotion, and comfort indoors with heterogeneous sensors and wearables.</span> Gao et&nbsp;al. <span class="venue">Nature Scientific Data</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">A gap in time: The challenge of processing heterogeneous IoT data in digitalized buildings.</span> Lin et&nbsp;al. <span class="venue">IEEE Pervasive Computing</span>, <span class="yr">2025</span>.</li>
+      <li><span class="title">Utilizing language models for energy load forecasting.</span> Xue &amp; Salim. <span class="venue">ACM BuildSys</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Occupant behavior modeling methods for resilient building design, operation and policy at urban scale.</span> Dong et&nbsp;al. <span class="venue">Applied Energy</span>, <span class="yr">2021</span>.</li>
+      <li><span class="title">Transfer learning for thermal comfort prediction in multiple cities.</span> Gao et&nbsp;al. <span class="venue">Building and Environment</span>, <span class="yr">2021</span>.</li>
+      <li><span class="title">Modelling urban-scale occupant behaviour, mobility, and energy in buildings: A survey.</span> Salim et&nbsp;al. <span class="venue">Building and Environment</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">A scalable room occupancy prediction with transferable time series decomposition of CO2 sensor data.</span> Arief-Ang, Hamilton &amp; Salim. <span class="venue">ACM TOSN</span>, <span class="yr">2018</span>.</li>
+      <li><span class="title">Three-dimensional vectorial holography based on machine learning inverse design.</span> Ren, Shao, Salim &amp; Gu. <span class="venue">Science Advances</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Evolutionary multi-objective ensemble learning for multivariate electricity consumption prediction.</span> Song, Qin &amp; Salim. <span class="venue">IJCNN</span>, <span class="yr">2018</span>.</li>
+    </ol>
+  </div>
+
+  <!-- T8 -->
+  <div class="pubgroup">
+    <h3>Smart Cities, Transport &amp; Urban Operations</h3>
+    <p class="gdesc">Mobility and transport analytics, parking and patrolling optimisation, micro-mobility, crime prediction, and human-centred location-based services.</p>
+    <ol class="pubs">
+      <li><span class="title">Applying value sensitive design to location-based services: Designing for shared spaces and local conditions.</span> Kegalle, Salim, Sanderson, Chan &amp; Hettiachchi. <span class="venue">ACM CHI</span>, <span class="yr">2026</span>.</li>
+      <li><span class="title">Mobility data science: Perspectives and challenges.</span> Mokbel et&nbsp;al. <span class="venue">ACM TSAS</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">Transferrable contextual feature clusters for parking occupancy prediction.</span> Shao et&nbsp;al. <span class="venue">Pervasive and Mobile Computing</span>, <span class="yr">2024</span>.</li>
+      <li><span class="title">FADACS: A few-shot adversarial domain adaptation architecture for context-aware parking availability sensing.</span> Shao et&nbsp;al. <span class="venue">IEEE PerCom</span>, <span class="yr">2021</span>.</li>
+      <li><span class="title">Are footpaths encroached by shared e-scooters? Spatio-temporal analysis of micro-mobility services.</span> Kegalle et&nbsp;al. <span class="venue">IEEE MDM</span>, <span class="yr">2023</span>.</li>
+      <li><span class="title">Traveling officer problem: Managing car parking violations efficiently using sensor data.</span> Shao, Salim, Gu, Dinh &amp; Chan. <span class="venue">IEEE IoT Journal</span>, <span class="yr">2017</span>.</li>
+      <li><span class="title">Incorporating LSTM auto-encoders in optimizations to solve parking officer patrolling problem.</span> Shao et&nbsp;al. <span class="venue">ACM TSAS</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Realtime predictive patrolling and routing with mobility and emergency calls data.</span> Rumi, Shao &amp; Salim. <span class="venue">ICWSM</span>, <span class="yr">2020</span>.</li>
+      <li><span class="title">Crime event prediction with dynamic features.</span> Rumi, Deng &amp; Salim. <span class="venue">EPJ Data Science</span>, <span class="yr">2018</span>.</li>
+      <li><span class="title">Predicting citywide passenger demand via reinforcement learning from spatio-temporal dynamics.</span> Ning et&nbsp;al. <span class="venue">EAI MobiQuitous</span>, <span class="yr">2018</span>.</li>
+      <li><span class="title">On the detection of unauthorized drones &mdash; techniques and future perspectives: A review.</span> Khan et&nbsp;al. <span class="venue">IEEE Sensors Journal</span>, <span class="yr">2022</span>.</li>
+      <li><span class="title">Algorithmic governance in smart cities: The conundrum and the potential of pervasive computing.</span> Zambonelli, Salim, Loke, De Meuter &amp; Kanhere. <span class="venue">IEEE Technology and Society Magazine</span>, <span class="yr">2018</span>.</li>
+      <li><span class="title">A location-query-browse graph for contextual recommendation.</span> Ren et&nbsp;al. <span class="venue">IEEE TKDE</span>, <span class="yr">2017</span>.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section id="service" class="service">
+  <h2>Professional Service &amp; Leadership</h2>
+  <div class="cols2">
+    <div class="item"><span class="h">Editorial Boards</span><br>ACM Transactions on Intelligent Systems and Technology (TIST) &middot; ACM Transactions on Spatial Algorithms and Systems (TSAS) &middot; PACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) &middot; Machine Learning &middot; Nature Scientific Data &middot; Associate Editor-in-Chief, IEEE Pervasive Computing.</div>
+    <div class="item"><span class="h">Area / Senior Area Chair</span><br>NeurIPS &middot; ICLR &middot; ACL &middot; KDD &middot; WWW &middot; AAAI &middot; IJCAI.</div>
+    <div class="item"><span class="h">National &amp; International Bodies</span><br>Member, National Committee for Information and Communication Sciences, Australian Academy of Science (2025&ndash;) &middot; Member, ARC College of Experts (2022&ndash;) &middot; Vice Chair, IEEE Task Force on AI for Time-Series and Spatio-Temporal Data (2025&ndash;).</div>
+    <div class="item"><span class="h">Research Centre Leadership</span><br>Deputy Director (Engagement), UNSW AI Institute &middot; Chief Investigator and Co-Lead, Machines Program &amp; Mobilities Focus Area, ARC Centre of Excellence for Automated Decision-Making and Society (ADM+S) &middot; Key CI &amp; Program Lead, ARC Training Centre for Whole-Life Design of Carbon-Neutral Infrastructure (dfCO2).</div>
+    <div class="item"><span class="h">Conference Organisation</span><br>General Co-Chair: PAKDD 2026, ACM MobileHCI 2024, IEEE MDM 2020 &middot; Program Co-Chair, ACM UbiComp 2020 &middot; TPC Co-Chair, IEEE PerCom 2018 &middot; Tutorial Chair, IJCAI 2025 &middot; Distinguished Paper Award Chair, ACM IMWUT.</div>
+    <div class="item"><span class="h">Energy &amp; Buildings</span><br>Expert Member, International Energy Agency (IEA) EBC (Energy in Buildings and Communities Programme) Annex 96 (Grid-Integrated Control of Buildings), and former expert member of IEA EBC Annex 79 (Occupant-Centric Building Design and Operations).</div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards" class="awards">
+  <h2>Honours &amp; Awards</h2>
+  <div class="cols2">
+    <div class="item">World's Top 2% Scientists, Stanford/Elsevier &mdash; career-long and single-year (2025)</div>
+    <div class="item">Best Research Paper, ACM SIGSPATIAL 2025 (XXLTraffic)</div>
+    <div class="item">Best Paper, Research Track, ECML-PKDD 2025 (PAR-AdvGAN)</div>
+    <div class="item">3rd place, Meta CRAG Multimodal Challenge, KDD Cup 2025 (team lead)</div>
+    <div class="item">Women in AI Award Australia &amp; New Zealand &mdash; AI in Defence &amp; Intelligence (2022)</div>
+    <div class="item">IMWUT Distinguished Paper Award (n-Gage, 2021)</div>
+    <div class="item">Humboldt Fellowship (Experienced Researcher), Alexander von Humboldt Foundation (2019&ndash;2020)</div>
+    <div class="item">Humboldt-Bayer Fellowship, Bayer Foundation (2019)</div>
+    <div class="item">Victoria Fellow, Veski &amp; Victorian Government (2018)</div>
+    <div class="item">RMIT Award for Research Impact &ndash; Technology (2018)</div>
+    <div class="item">RMIT Vice-Chancellor's Award for Research Excellence, ECR (2016)</div>
+    <div class="item">ARC Postdoctoral Research (Industry) Fellow (2012)</div>
+    <div class="item">IBM Smarter Planet Industry Skills Innovation Award (2010)</div>
+  </div>
+</section>
+
+<!-- TALKS -->
+<section id="talks">
+  <h2>Selected Keynotes &amp; Invited Talks</h2>
+  <ul class="news">
+    <li><span class="date">2025</span><span>Plenary keynote, <strong>The Trillion Parameter Consortium (TPC) 2025</strong> &mdash; "Modeling and Simulating Complex Behavior in Dynamic Cyber-Physical-Social Systems."</span></li>
+    <li><span class="date">2025</span><span>Invited speaker &amp; panelist, <strong>NVIDIA GTC 2025</strong> &mdash; "The Role of AI and Accelerated Computing in Understanding and Mitigating Urban Climate Change."</span></li>
+    <li><span class="date">2025</span><span>Keynote, <strong>ACII 2025</strong>; Plenary, <strong>EDBT 2025 Summer School on AI &amp; Data Management</strong>.</span></li>
+    <li><span class="date">2024</span><span>Keynote, <strong>ACM SIGSPATIAL 2024</strong> &mdash; "LLMs it (or not!): Foundational and robust approaches for modelling trajectory and spatio-temporal behaviours."</span></li>
+    <li><span class="date">2024</span><span>Seminars at <strong>Columbia</strong>, <strong>Cornell</strong>, and <strong>Tsinghua</strong> Universities on LLMs and modelling human behaviour.</span></li>
+    <li><span class="date">2024</span><span>Keynote, <strong>AJCAI 2024</strong>; Keynote, public-transport and smart-city forums (PTA ANZ).</span></li>
+    <li><span class="date">2021</span><span>Keynote, <strong>IEEE MDM 2021</strong>; Invited talk, <strong>KDD 2021</strong> Applied Data Science track.</span></li>
+    <li><span class="date">2019</span><span>Invited speaker, <strong>Microsoft Faculty Summit: The Future of Work</strong>, Redmond.</span></li>
+  </ul>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <h2>Group &amp; Mentoring</h2>
+  <p>My research group, Context Recognition and Urban Intelligence (CRUISE), brings together PhD students and postdocs working across foundation models, trustworthy ML, and AI for cities, energy, and health. I have supervised 23+ PhD students to completion as primary supervisor and mentored 12+ postdocs, many of whom now hold academic positions or lead data-science teams in industry and government. I actively support early-career researchers, women, and international candidates through IEEE N2Women, IEEE ASSET, and PhD colloquiums at UbiComp, PerCom, and The Web Conference.</p>
+  <img src="images/cruise_group_nov2025.jpeg" alt="CRUISE group, UNSW — November 2025" style="width:100%;border-radius:10px;border:1px solid var(--line);margin-top:8px">
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>School of Computer Science and Engineering, UNSW Sydney, NSW 2052, Australia.<br>
+  Email: <a href="mailto:flora.salim@unsw.edu.au">flora.salim@unsw.edu.au</a></p>
+  <div class="links" style="justify-content:flex-start;margin-left:0">
+    <a href="https://scholar.google.com/citations?hl=en&user=Yz35RSYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/flora-salim-6958986" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://cruiseresearchgroup.github.io" target="_blank" rel="noopener">CRUISE Group Website</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Flora Salim &middot; Professor, School of Computer Science and Engineering, UNSW Sydney.</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
