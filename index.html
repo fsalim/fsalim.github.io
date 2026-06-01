@@ -81,12 +81,14 @@ nav.top{
   background:rgba(251,250,247,.92);backdrop-filter:blur(8px);
   margin:-54px -56px 38px;padding:14px 56px;
   border-bottom:1px solid var(--line);
-  display:flex;flex-wrap:wrap;gap:20px;font-size:.85rem;font-weight:500;
+  display:flex;flex-wrap:nowrap;gap:20px;font-size:.85rem;font-weight:500;
+  overflow-x:auto;white-space:nowrap;
 }
+nav.top a{flex:0 0 auto}
 nav.top a{color:var(--muted);text-decoration:none}
 nav.top a:hover{color:var(--accent)}
 
-section{margin-bottom:48px;scroll-margin-top:70px}
+section{margin-bottom:48px;scroll-margin-top:72px}
 section > h2{
   font-size:1.5rem;margin:0 0 18px;padding-bottom:8px;
   border-bottom:2px solid var(--accent-soft);
@@ -201,6 +203,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;font-si
   <a href="#research">Research</a>
   <a href="#highlights">Selected Work</a>
   <a href="#publications">Publications</a>
+  <a href="#projects">Projects</a>
   <a href="#service">Service</a>
   <a href="#awards">Awards</a>
   <a href="#talks">Talks</a>
@@ -448,16 +451,37 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;font-si
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects &amp; Partners</h2>
+  <p>My research is conducted with, and translated through, a broad network of industry, government, and research partners. Selected projects:</p>
+  <ul class="news">
+    <li><span class="date">2026&ndash;</span><span><strong>ROSITA</strong> &mdash; robust multi-sensor multimodal foundation models for continual situational understanding (ASCA, Australian Department of Defence).</span></li>
+    <li><span class="date">2024&ndash;</span><span><strong>GenAISim</strong> &mdash; generative AI simulation for multi-stakeholder decision-making (ADM+S signature project).</span></li>
+    <li><span class="date">2024&ndash;</span><span><strong>ML for Carbon Performance</strong> &mdash; analytics and machine learning across the infrastructure lifecycle (ARC Training Centre, dfCO2).</span></li>
+    <li><span class="date">2023&ndash;</span><span><strong>Understanding Bias in AI for Infectious Disease Spread</strong> (CSIRO &amp; US NSF).</span></li>
+    <li><span class="date">2023&ndash;</span><span><strong>Digital Infrastructure Energy Flexibility</strong> &mdash; the BTS dataset and Brick-by-Brick Challenge for net-zero buildings (RACE for 2030; NSW DCCEEW; CSIRO).</span></li>
+    <li><span class="date">2018&ndash;</span><span><strong>Cortana Intelligence Institute</strong> &mdash; cyber-physical-social personal assistant; granted US patent and Microsoft 365 features (Microsoft Research).</span></li>
+    <li><span class="date">earlier</span><span>Smart parking &amp; amenities (Mornington Peninsula Shire); footpath and pedestrian analytics (City of Melbourne); airport tarmac situational awareness (Northrop Grumman); EV-charging rollout planning (Transport for NSW); indoor trajectory and retail behaviour (Scentre Group / Westfield).</span></li>
+  </ul>
+
+  <h3 style="font-size:1.12rem;margin:24px 0 10px">Industry &amp; Research Partners</h3>
+  <div class="cols2">
+    <div class="item"><span class="h">Industry &amp; corporates</span><br>Microsoft &middot; Google &middot; Cisco &middot; IBM Research &middot; Nokia Bell Labs &middot; SoftBank Australia &middot; Northrop Grumman Corporation &middot; Baker Hughes (Nuovo Pignone Tecnologie) &middot; Rheinmetall Defence Australia &middot; Scentre Group / Westfield &middot; Siemens &middot; Arup &middot; Aurecon &middot; Archistar &middot; Gippsland Water &middot; GWMWater &middot; Melbourne Water &middot; NVIDIA.</div>
+    <div class="item"><span class="h">Government &amp; public sector</span><br>Transport for NSW (TfNSW) &middot; City of Melbourne &middot; Mornington Peninsula Shire &middot; Victorian Department of Transport &middot; NSW DCCEEW &middot; Australian Department of Defence.</div>
+    <div class="item"><span class="h">Research agencies, funders &amp; foundations</span><br>Australian Research Council (ARC) &middot; CSIRO / Data61 &middot; US National Science Foundation (NSF) &middot; US Air Force Research Laboratory &middot; US ARL &middot; Qatar National Research Fund (NPRP) &middot; RACE for 2030 &middot; C4NET &middot; AURIN &middot; Defence Trailblazer &middot; Alexander von Humboldt Foundation &middot; Bayer Foundation &middot; Veski.</div>
+  </div>
+</section>
+
 <!-- SERVICE -->
 <section id="service" class="service">
   <h2>Professional Service &amp; Leadership</h2>
   <div class="cols2">
     <div class="item"><span class="h">Editorial Boards</span><br>ACM Transactions on Intelligent Systems and Technology (TIST) &middot; ACM Transactions on Spatial Algorithms and Systems (TSAS) &middot; PACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) &middot; Machine Learning &middot; Nature Scientific Data &middot; Associate Editor-in-Chief, IEEE Pervasive Computing.</div>
     <div class="item"><span class="h">Area / Senior Area Chair</span><br>NeurIPS &middot; ICLR &middot; ACL &middot; KDD &middot; WWW &middot; AAAI &middot; IJCAI.</div>
-    <div class="item"><span class="h">National &amp; International Bodies</span><br>Member, National Committee for Information and Communication Sciences, Australian Academy of Science (2025&ndash;) &middot; Member, ARC College of Experts (2022&ndash;) &middot; Vice Chair, IEEE Task Force on AI for Time-Series and Spatio-Temporal Data (2025&ndash;).</div>
+    <div class="item"><span class="h">National &amp; International Committee</span><br>Member, National Committee for Information and Communication Sciences, Australian Academy of Science (2025&ndash;) &middot; Member, ARC College of Experts (2022&ndash;) &middot; Vice Chair, IEEE Task Force on AI for Time-Series and Spatio-Temporal Data (2025&ndash;) &middot; Expert Member, International Energy Agency (IEA) EBC (Energy in Buildings and Communities Programme) Annex 96 (Grid-Integrated Control of Buildings), and former expert member of IEA EBC Annex 79 (Occupant-Centric Building Design and Operations).</div>
     <div class="item"><span class="h">Research Centre Leadership</span><br>Deputy Director (Engagement), UNSW AI Institute &middot; Chief Investigator and Co-Lead, Machines Program &amp; Mobilities Focus Area, ARC Centre of Excellence for Automated Decision-Making and Society (ADM+S) &middot; Key CI &amp; Program Lead, ARC Training Centre for Whole-Life Design of Carbon-Neutral Infrastructure (dfCO2).</div>
-    <div class="item"><span class="h">Conference Organisation</span><br>General Co-Chair: PAKDD 2026, ACM MobileHCI 2024, IEEE MDM 2020 &middot; Program Co-Chair, ACM UbiComp 2020 &middot; TPC Co-Chair, IEEE PerCom 2018 &middot; Tutorial Chair, IJCAI 2025 &middot; Distinguished Paper Award Chair, ACM IMWUT.</div>
-    <div class="item"><span class="h">Energy &amp; Buildings</span><br>Expert Member, International Energy Agency (IEA) EBC (Energy in Buildings and Communities Programme) Annex 96 (Grid-Integrated Control of Buildings), and former expert member of IEA EBC Annex 79 (Occupant-Centric Building Design and Operations).</div>
+    <div class="item"><span class="h">Conference Organisation</span><br>General Co-Chair: PAKDD 2026, ACM MobileHCI 2024, IEEE MDM 2020 &middot; Program Co-Chair, ACM UbiComp 2020 &middot; TPC Co-Chair, IEEE PerCom 2018 &middot; Tutorial Chair, IJCAI 2025 &middot; Distinguished Paper Award Chair, ACM IMWUT &middot; ACM SIGSPATIAL Recognition Committee (2024&ndash;2026).</div>
   </div>
 </section>
 
